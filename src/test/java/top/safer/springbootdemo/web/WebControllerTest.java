@@ -27,4 +27,15 @@ public class WebControllerTest {
                 .andReturn().getResponse().getContentAsString();
         System.out.println("result: "+responseString);
     }
+
+    @Test
+    public void saveUser() throws Exception {
+        String responseString=mockMvc.perform(MockMvcRequestBuilders.post("/saveUser")
+                .param("name","")
+                .param("age","666")
+                .param("pass","test")
+                .accept(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn().getResponse().getContentAsString();
+        System.out.println("result: "+responseString);
+    }
 }
