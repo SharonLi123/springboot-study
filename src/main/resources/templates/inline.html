@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>inline</title>
+</head>
+<body>
+    <div>
+        <h1>内联</h1>
+        <div th:inline="text" >
+            <p>Hello, [[${userName}]] !</p>
+            <br/>
+        </div>
+    </div>
+</body>
+<script th:inline="javascript">
+    var name = [[${userName}]] + ', Sebastian';
+    alert(name);
+</script>
+</html>
