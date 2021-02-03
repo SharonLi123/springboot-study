@@ -1,16 +1,15 @@
 package top.safer.springbootdemo.web;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author sakura
- */
-@RestController
+@Controller
 public class HelloController {
 
-    @RequestMapping("/hello")
-    public String hello(String name){
-        return "hello world "+name;
+    @RequestMapping("/")
+    public String index(ModelMap map){
+        map.addAttribute("message","http://www.ityouknow.com");
+        return "hello";
     }
 }
