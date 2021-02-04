@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="top.safer.springbootdemo.mapper.UserMapper">
+<mapper namespace="top.safer.springbootdemo.mapper.one.User1Mapper">
     <resultMap id="BaseResultMap" type="top.safer.springbootdemo.model.User">
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="userName" property="userName" jdbcType="VARCHAR" />
